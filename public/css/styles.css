@@ -1,0 +1,32 @@
+* {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h1 {
+    font-size : 3rem;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+a {
+    font-size : 1.2rem;
+    text-decoration: none;
+    color : black;
+    margin : 0 12px 12px 0;
+    display : inline-block;
+}
+
+a:hover {
+    color : #300beb;
+}
+
+.img-container {
+    with : 100%;
+    max-width : 500px;
+
+}
+
+img {
+    width : 100%;
+    margin : 24px 0;
+}
