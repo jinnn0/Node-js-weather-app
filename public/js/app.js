@@ -25,7 +25,7 @@ form.addEventListener('submit', (e) => {
 
     messageOne.textContent = 'Loading..'
     
-    fetch(`http://localhost:3000/weather?address=${search}`)
+    fetch(`/weather?address=${search}`)
     .then(res => {
        return res.json() 
     }).then(data => {

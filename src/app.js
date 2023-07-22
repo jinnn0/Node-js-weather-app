@@ -5,6 +5,7 @@ const geocode = require('./utils/geocode')
 const forecast = require('./utils/forecast')
 
 const app = express()
+const PORT = 3000
 
 // Define paths for Express config
 const publicDirPath = path.join(__dirname, '../public')
@@ -20,8 +21,7 @@ hbs.registerPartials(partialsPath)
 app.use(express.static(publicDirPath))
 
 
-
-
+// Routes
 app.get('', (req, res) => {
     res.render('index', {title : 'Home page 🏡'})
 })
@@ -34,7 +34,6 @@ app.get('/about', (req, res) => {
 app.get('/weather', (req, res) => {
     const address = req.query.address
 
-
     if (!address) {
         res.send({error : 'Please provide an address'})
     } else {
@@ -42,7 +41,6 @@ app.get('/weather', (req, res) => {
             if (error) {
                 return res.send({error})
             }
-
 
             forecast(latitude, longitude, (error, {location, current}) => {
                 if (error) {
@@ -60,7 +58,7 @@ app.get('/help', (req, res) => {
     res.render('help', {title : 'Help page 😙'})
 })
 
-// 404
+// Help 404
 app.get('/help/*', (req, res) => {
     res.render('404', {errorMessage : 'NOT FOUND'})
 
@@ -72,10 +70,7 @@ app.get('*', (req, res) => {
 })
 
 
-
-
-
-app.listen(3000, () => {
+app.listen(PORT, () => {
     console.log("Server is up on port 3000.")
 })
 
