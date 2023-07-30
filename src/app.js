@@ -26,7 +26,6 @@ app.get('', (req, res) => {
     res.render('index', {title : 'Home page 🏡'})
 })
 
-
 app.get('/about', (req, res) => { 
     res.render('about', {title : 'About page 😀'})
 })
