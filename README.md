@@ -1,8 +1,3 @@
-## Screenshots
-
-![screenshot 1](screenshots/screenshot-1.png)
-![screenshot 2](screenshots/screenshot-2.png)
-
 ## Quick Start
 
 Basics of express.js application
@@ -22,4 +17,9 @@ $ node src/app.js
 
 ## Todo
 
-- [ ] Hosting the app 
+- [ ] Hosting the app
+
+
+## Screenshots
+
+![screenshot 1](screenshots/screenshot-1.png)
