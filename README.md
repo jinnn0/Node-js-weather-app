@@ -13,3 +13,8 @@ $ npm install
 ```console
 $ node src/app.js
 ```
+
+
+## Todo
+
+- [] Hosting the app 
